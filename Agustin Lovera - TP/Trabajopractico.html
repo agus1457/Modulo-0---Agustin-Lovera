@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP_JavaScript</title>
+</head>
+<body>
+    
+<H2>1</H2>
+
+<label for="ej1_n1">Número 1</label>
+<input type="number" id="ej1_n1">
+
+<label for="ej1_n2">Número 2</label>
+<input type="number" id="ej1_n2">
+
+<label for="ej1_n3">Número 3</label>
+<input type="number" id="ej1_n3">
+
+<button onclick= "func_1()">Variación</button>
+
+<label for="ej1_resultado">Resultado</label>
+<input type="text" id="ej1_resultado">
+
+<script>
+     function func_1(){
+
+       let ej1_n1= parseFloat (document.getElementById('ej1_n1').value);
+       let ej1_n2= parseFloat (document.getElementById('ej1_n2').value);
+       let ej1_n3= parseFloat (document.getElementById('ej1_n3').value);
+
+       if (ej1_n1 > ej1_n2 && ej1_n1 > ej1_n3){
+           document.getElementById('ej1_resultado').value= "El Número 1 es el mayor"
+       }
+       if (ej1_n2 > ej1_n1 && ej1_n2 > ej1_n3){
+           document.getElementById('ej1_resultado').value= "El Número 2 es el mayor"
+       }
+       if (ej1_n3 > ej1_n1 && ej1_n3 > ej1_n2){
+        document.getElementById('ej1_resultado').value= "El Número 3 es el mayor"
+       }
+
+     }
+
+</script>
+
+<h2>2</h2>
+
+<label for="ej2_n1">Número 1</label>
+<input type="number" id="ej2_n1" >
+
+<label for="ej2_n2">Número 2</label>
+<input type="number" id="ej2_n2" >
+
+<button onclick="func_ej2()">Sumar</button>
+
+<label for="ej2_resultado">Total</label>
+<input type="number" id="ej2_resultado">
+
+<script>
+
+    function func_ej2(){
+
+        let ej2_n1= parseFloat (document.getElementById('ej2_n1').value);
+        let ej2_n2= parseFloat (document.getElementById('ej2_n2').value);
+
+        const suma= ej2_n1 + ej2_n2
+        document.getElementById('ej2_resultado').value= suma
+    }
+
+</script>
+
+<h2>3</h2>
+
+<label for="ej3_palabra">Palabra</label>
+<input type="text" id="ej3_palabra">
+
+<label for="ej3_num">Número de repeticiones</label>
+<input type="number" id="ej3_num">
+
+<button onclick="func_ej3()">Ejecutar</button>
+
+<label for="ej3_resultado">Total</label>
+<input type="text" id="ej3_resultado" >
+
+<script>
+
+    function func_ej3(){
+
+        let ej3_palabra= document.getElementById('ej3_palabra').value;
+        let ej3_num= parseFloat (document.getElementById('ej3_num').value);
+        let texto = ""
+
+        for (let index = 0; index < ej3_num; index++){
+            texto += ej3_palabra +" "
+        }
+
+    document.getElementById('ej3_resultado').value = texto; 
+
+    }
+
+</script>
+
+<h2>4</h2>
+
+<label for="ej4_grados_c">Centigrados</label>
+<input type="number" id="ej4_grados_c">
+
+<button onclick="func_ej4()">Pasar</button>
+
+<label for="ej4_grados_C">Celsius</label>
+<input type="number" id="ej4_grados_C">
+
+<script>
+
+    function func_ej4(){
+
+        let ej4
+
+
+    }
+    
+</script>
+
+
+<h2>5</h2>
+
+<label for="ej5_palabra">Palabra</label>
+<input type="text" id="ej5_palabra">
+
+<button onclick="func_ej5">Calcular</button>
+
+<label for="ej5_letras">Cantidad de letras</label>
+<input type="number" id="ej5_letras">
+
+<script>
+
+    function func_ej5(){
+
+        let ej5_palabra= document.getElementById('ej5_palabra').value
+        
+        ej5_letras= ej5_palabra.length; 
+
+        document.getElementById('ej5_letras').value= ej5_letras
+
+    }
+</script>
+
+<h2>6</h2>
+
+<label for="ej6_num">Número</label>
+<input type="number" id="ej6_num">
+
+<button onclick="func_6">Verificar</button>
+
+<label for="ej6_par">Resultado</label>
+<input type="text" id="ej6_par">
+
+<script>
+
+    function func_6(){
+
+     let ej6_num= document.getElementById('ej6_num').value
+
+        document.getElementById('ej6_num').value
+
+        if(ej6_num % 2 == 0){
+            document.getElementById('ej6_par').value= "El numero es par";
+
+        }else{
+
+            document.getElementById('ej6_par').value= "El numero es impar";
+        }
+
+    }
+
+</script>
+
+<h2>7</h2>
+
+<label for="ej7_n1">Número 1</label>
+<input type="number"id="ej7_n1">
+
+<label for="ej7_n2">Número 2</label>
+<input type="number" id="ej7_n2">
+
+<button onclick="func_7()">Ejecutar</button>
+
+<label for="ej7_multiplos">Multiplos de 3 comprendidos entre ambos</label>
+<input type="number" id="ej7_multiplos">
+
+<h2>8</h2>
+
+<label for="ej8_num">Numero</label>
+<input type="number" id="ej8_num">
+
+<button onclick="func_8()">Mostrar</button>
+
+<label for="ej8_numeros_primos">Numero primos anteriores al numero ingresado</label>
+<input type="number" id="ej8_numeros_primos">
+
+<h2>9</h2>
+
+<label for="ej9_nombre">Nombre</label>
+<input type="text" id="ej9_nombre">
+
+<label for="ej9_apellido">Apellido</label>
+<input type="text" id="ej9_apellido">
+
+<label for="ej9_edad">Edad</label>
+<input type="number" id="ej9_edad">
+
+<label for="ej9_cuidad">Cuidad</label>
+<input type="text" id="ej9_cuidad">
+
+<button onclick="func_9()">Crear</button>
+
+<label for="ej9_oracion">Oracion</label>
+<input type="text" id="ej9_oracion">
+
+<h2>10</h2>
+
+<label for="ej10_valor01">Primer valor entero</label>
+<input type="number" id="ej10_valor01">
+
+<label for="ej10_valor02">Segundo valor entero</label>
+<input type="number" id="ej10_valor02">
+
+<button onclick="func_10()">Mostrar</button>
+
+<label for="ej10_numeros">Numeros comprendidos entre ambos valores</label>
+<input type="number" id="ej10_numeros">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
